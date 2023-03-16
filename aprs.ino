@@ -180,16 +180,6 @@ void tx_aprs(void)
     Wide2Path = 1;
   }
 
-  //DO NOT TOUCH
-  /* Construct the compressed telemetry format */
-  ptr = stlm;
-  ax25_base91enc(ptr, 2, messagesTransmitted);
-  ptr += 2;
-  ax25_base91enc(ptr, 2, GPS.Satellites);
-  ptr += 2;
-  ax25_base91enc(ptr, 2, Channel0Average);  
-
-
 if (aprs_mode == 0)
   { 
     char data[200];
