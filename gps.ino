@@ -247,6 +247,11 @@ void SetupGPS(void)
   digitalWrite(GPS_ON, 1);
 #endif
 
+#ifdef GPS_I2C
+  // Init i2c library
+  // Wire.begin();
+  I2c.begin();
+#endif
 
 }
 
