@@ -175,7 +175,7 @@ void setup() { //Setup and annoucements
 
 
 void loop() {  
-  
+  CheckLEDs(); //control leds on habduino
   //Each Check function updates the data or starts the correct radio functions
   #ifdef Activate_GPS
     CheckGPS();
