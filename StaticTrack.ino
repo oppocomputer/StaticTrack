@@ -130,8 +130,15 @@ int SentenceCounter=0;
 
 //------------------------------------------------------------------------------------------------------
 
+#define GPS_SERIAL Serial
+#define DEBUG_SERIAL Serial
+
 void setup() { //Setup and annoucements
-  Serial.begin(9600);
+  #ifdef GPS_SERIAL
+    GPS_SERIAL.begin(9600);
+  #endif
+	
+  DEBUG_SERIAL.begin(9600);
   Serial.println("");
   Serial.print("StaticTrack Flight Computer, payload ID(s):");
     
